@@ -1,0 +1,32 @@
+sensor_fusion:
+  ros__parameters:
+    profiling_enabled: True
+
+    topics:
+      sub:
+        points_compensated: "/perception/lidar_motion_compensator/compensated_pc"
+        fw_bbox: "/perception/depth_estimation/bbox_depth"
+        debug:
+          fw_cam: "/forward_camera/pylon_ros2_camera_node/image_raw"
+      pub:
+        cone_array: "/perception/fusion/cone_array"
+        debug:
+          img_overlay: "/perception/sensor_fusion_baseline/debug/img_overlay"
+          bbox_fusion: "/perception/sensor_fusion_baseline/debug/bbox_depth"
+          cone_markers: "/perception/fusion/cone_markers"
+        runtime: "/perception/runtimes"
+
+    # Image resolution
+    image_width: 2592
+    image_height: 352
+
+    # Frame IDs
+    frame_ids:
+      camera: "pylon_camera"
+      base_link: "base_link" 
+      reference_frame: "odom"
+
+    # Camera intrinsics file
+    intrinsics_file: "package://camera_launcher/config/calibration/forward_camera_CAR_NAME_2024.yaml"
+
+

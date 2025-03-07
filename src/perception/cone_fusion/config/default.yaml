@@ -1,0 +1,14 @@
+cone_fusion:
+  ros__parameters:
+    profiling_enabled: True
+
+    topics:
+      sub:
+        camera_cone: "/perception/camera/cone_array"
+        lidar_cone: "/perception/lidar/cone_array"
+        sf_cone: "/perception/fusion/cone_array"
+      pub:
+        output_cone: "/perception/cone_array"
+        markers: "/perception/cone_markers"
+        runtime: "/perception/runtimes"
+

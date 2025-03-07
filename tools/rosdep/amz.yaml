@@ -1,0 +1,52 @@
+onnxruntime:
+  ubuntu: [onnx-runtime]
+
+pylon:
+  ubuntu: [pylon]
+
+easyprofiler:
+  ubuntu: [easy-profiler]
+
+acados:
+  ubuntu: [acados]
+
+fast-cpp-csv-parser:
+  ubuntu: [fast-cpp-csv-parser]
+
+gtsam-release:
+  ubuntu: [gtsam]
+
+gtsam-dev:
+  ubuntu: [libgtsam-unstable-dev, libgtsam-dev]
+
+libpcl-dev:
+  ubuntu: [libpcl-dev]
+
+libpcap-dev:
+  ubuntu: [libpcap-dev]
+
+libyaml-cpp-dev:
+  ubuntu: [libyaml-cpp-dev]
+
+libboost-dev:
+  ubuntu: [libboost-dev]
+
+cpplint:
+  ubuntu:
+    pip:
+      packages: [cpplint]
+
+pre-commit:
+  ubuntu:
+    pip:
+      packages: [pre-commit]
+
+customtkinter:
+  ubuntu:
+    pip:
+      packages: [customtkinter]
+
+paramiko:
+  ubuntu:
+    pip:
+      packages: [paramiko]

@@ -1,0 +1,14 @@
+node: hesai_ros_driver_node
+
+topics:
+    subscriber:
+      ros_recv_packet_topic: "/lidar_packets" 
+         # Only if you're replaying raw LiDAR packets from a bag or 
+         # have 'source_type=3' (packet rosbag) in config.yaml.
+
+    publisher:
+      ros_send_packet_topic: "/lidar_packets"
+         # Publishes raw LiDAR packets if send_packet_ros=true in config.yaml.
+      ros_send_point_cloud_topic: "/lidar_points"
+         # Publishes assembled point clouds in sensor_msgs/msg/PointCloud2 format
+         # if send_point_cloud_ros=true in config.yaml.

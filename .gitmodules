@@ -1,0 +1,3 @@
+[submodule "src/amzsim/amzsim_backend/amzsim_codegen_model/codegen_vehicle_model"]
+	path = src/amzsim/amzsim_backend/amzsim_codegen_model/codegen_vehicle_model
+	url = git@github.com:AMZ-Racing/codegen_vehicle_model.git

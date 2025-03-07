@@ -1,0 +1,20 @@
+# TF Publisher
+
+## Explanation(s):
+The code publishes all the custom messages from the VCU.
+
+## Subscriptions:
+Ethernet connection to VCU
+
+## Publications:
+Everything published at 200Hz.
+Car Command
+EbsPressures
+LlcLogging
+LlcParameters
+LvBattery
+MissionSelect
+ResState
+StateMachine
+TorqueData
+VelocityEstimation

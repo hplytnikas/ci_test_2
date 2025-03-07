@@ -1,0 +1,9 @@
+This node uses internet to obtain RTK corrections and publishes it.
+
+Subscribers:
+
+/nmea - Messages input to compute corrections for.
+
+Publishes:
+
+/rtcm - RTK Corrections

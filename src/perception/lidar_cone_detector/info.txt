@@ -1,0 +1,10 @@
+node: lidar_cone_detector_node
+
+topics:
+        subscriber:
+          topic_lidar_point: "/lidar_points"
+        publisher:
+          topic_cone_array: "/perception/lidar/cone_array"
+          topic_compensated_pc: "/perception/lidar_motion_compensator/compensated_pc"
+          topic_debug_filtered_pc: "/filtered_point_cloud"
+          topic_debug_centroid_dbscan: "/cluster_centroids_markers"

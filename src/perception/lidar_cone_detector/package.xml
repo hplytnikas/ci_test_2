@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>lidar_cone_detector</name>
+  <version>0.0.1</version>
+  <description>LiDAR Cone Detector package with unified parameter handling and configuration loading.</description>
+
+  <maintainer email="your.email@example.com">Your Name</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- Build tool -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Build dependencies (needed when compiling) -->
+  <build_depend>rclcpp</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>autonomous_msgs</build_depend>
+  <build_depend>visualization_msgs</build_depend>
+
+  <!-- Execution dependencies (needed at runtime) -->
+  <exec_depend>rclcpp</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>autonomous_msgs</exec_depend>
+  <exec_depend>visualization_msgs</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
+

@@ -1,0 +1,14 @@
+controller_node:
+  ros__parameters:
+    # General controller parameters
+    velocity_estimation_topic: /vcu_msgs/velocity_estimation
+    steering_topic: /vcu_msgs/steering_feedback
+    path_topic: /planning/reference
+    car_command_topic: /control/car_command
+    res_state_topic: /vcu_msgs/res_state
+    controller_frequency: 100.0
+    controller_timeout_reset: 4000    #Number of steps before the controller resets
+    controller_timeout_fatal: 20000   #Number of steps before the controller goes into a fatal error
+    braking_acceleration: 40.0
+    profiling_enabled: True
+

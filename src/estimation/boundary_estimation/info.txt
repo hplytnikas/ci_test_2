@@ -1,0 +1,22 @@
+# Boundary Estimation
+
+## Explanation(s):
+Boundary Estimation is the package responsible for computing the boundary of the track and the correspondig correct path within it.
+It uses as input the SLAM map and compute the result based on the Delaunay triangulation.
+
+## Subscriptions:
+`/estimation/online_map`
+Where it receives the global map of the cones from SLAM
+
+## Publications:
+`/estimation/bounded_path` 
+Where it publishes the boundary of the track and the middle points of the path
+
+`/estimation/be_visual_delaunay`
+Where it publishes the visualization data, this topic is used for debugging and can be disabled
+
+`/estimation/be_runtime`
+Where it publishes the runtime of the algorithm, this topic is used for debugging and can be disabled
+
+## Visualization(s):
+One can visualize the Delauney Triangles for debugging.

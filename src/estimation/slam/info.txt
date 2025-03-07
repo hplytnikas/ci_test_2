@@ -1,0 +1,41 @@
+GraphSLAM pipeline
+
+ros2 nodes:
+/slam
+
+/slam info:
+  Subscribers:
+    /clock: rosgraph_msgs/msg/Clock
+    /lap_count: std_msgs/msg/Int32
+    /moving: std_msgs/msg/Bool
+    /parameter_events: rcl_interfaces/msg/ParameterEvent
+    /perception/lidar/cone_array: autonomous_msgs/msg/ConeArray
+    /vcu_msgs/mission_finished: autonomous_msgs/msg/BoolStamped
+  Publishers:
+    /estimation/acceleration_map_status: std_msgs/msg/Bool
+    /estimation/online_map: autonomous_msgs/msg/ConeArray
+    /estimation/viz/association: visualization_msgs/msg/MarkerArray
+    /estimation/viz/optimized_global_map: visualization_msgs/msg/MarkerArray
+    /estimation/viz/optimized_poses: geometry_msgs/msg/PoseArray
+    /estimation/viz/raw_graph: visualization_msgs/msg/MarkerArray
+    /parameter_events: rcl_interfaces/msg/ParameterEvent
+    /rosout: rcl_interfaces/msg/Log
+    /tf: tf2_msgs/msg/TFMessage
+  Service Servers:
+    /slam/describe_parameters: rcl_interfaces/srv/DescribeParameters
+    /slam/get_parameter_types: rcl_interfaces/srv/GetParameterTypes
+    /slam/get_parameters: rcl_interfaces/srv/GetParameters
+    /slam/list_parameters: rcl_interfaces/srv/ListParameters
+    /slam/set_parameters: rcl_interfaces/srv/SetParameters
+    /slam/set_parameters_atomically: rcl_interfaces/srv/SetParametersAtomically
+  Service Clients:
+
+  Action Servers:
+
+  Action Clients:
+
+Launch files:
+- ros2 launch slam_frontend slam_frontend_acceleration.launch.py
+- ros2 launch slam_frontend slam_frontend_autocross.launch.py
+- ros2 launch slam_frontend slam_frontend_skidpad.launch.py
+- ros2 launch slam_frontend slam_frontend_trackdrive.launch.py
