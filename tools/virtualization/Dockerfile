@@ -37,7 +37,7 @@ RUN   add-apt-repository -y ppa:neovim-ppa/unstable && \
 ARG   BRANCH=main
 
 # Cool way to clone the autonomous_2025, invalidates cache on new commits, and lets for specifying branches !
-ADD   --keep-git-dir=true --chown=amz:amz git@github.com:AMZ-Racing/autonomous_2025.git#$BRANCH /autonomous_2025
+ADD   --keep-git-dir=true --chown=amz:amz https://github.com/hplytnikas/ci_test_2.git#$BRANCH /autonomous_2025
 
 WORKDIR /autonomous_2025
 
