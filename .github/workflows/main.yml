@@ -59,6 +59,7 @@ jobs:
           else \
             echo "::set-output name=image_exists::true"; \
           fi
+
   # If the image with dependencies does not exist, build it and push it to the
   # registry.
   build-dependency-image:
@@ -82,7 +83,7 @@ jobs:
       - name: Tag the dependency image
         if: ${{ needs.check-if-dependency-image-exists.outputs.image_exists == 'false' }}
         run: docker tag $DEPENDENCY_IMAGE:latest $DOCKER_REGISTRY/$DEPENDENCY_IMAGE:${{ needs.generate-dependency-hash.outputs.hash }}
-        - name: Push the dependency image
+      - name: Push the dependency image
         if: ${{ needs.check-if-dependency-image-exists.outputs.image_exists == 'false' }}
         run: docker push $DOCKER_REGISTRY/$DEPENDENCY_IMAGE:${{ needs.generate-dependency-hash.outputs.hash }}
 
