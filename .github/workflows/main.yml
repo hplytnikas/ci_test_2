@@ -13,7 +13,6 @@ on:
   pull_request:
 
 jobs:
-
   # This job generates a hash of the files in /tools/deps which is used to
   # determine if they changed.
   generate-dependency-hash:
